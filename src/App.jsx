@@ -2,6 +2,7 @@ import Description from './components/Description/Description'
 import Options from './components/Options/Options'
 import Feedback from './components/Feedback/Feedback'
 import { useState, useEffect } from "react";
+import Notification from './components/Notification/Notification';
 
 function App() {
   const [reviews, setReviews] = useState(
@@ -57,7 +58,7 @@ function App() {
           positive={positiveFeedback}
         />
       ) : (
-        <p>No Feedback yet</p>
+        <Notification/>
       )}
     </>
   );
